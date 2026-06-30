@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.swp
+
+# OS
+.DS_Store
+
+# Experiment outputs
+out/
+outputs/
+log/
+slurm_logs/
+core*
+
+# Weights & logging
+ckpts/
+wandb/
+*.pth
+*.bin
+
+# Local datasets (annotations under data/ are tracked; raw media/poses are not)
+dataset/
+*.mp4
+
+# Scratch
+backup/
