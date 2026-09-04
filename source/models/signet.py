@@ -783,14 +783,11 @@ class SignetGate(nn.Module):
         
         # Attention-based aggregation
         x_global, attn_weights = self.aggregate_experts_attention(expert_globals)  # [B, D]
-        
-
-        expert_outputs = [exp['encoder_embeds'] for exp in inputs_of_experts]  # list of [B, T, H]
 
         # Top-k gating
         fused_embeds, topk_idx, gate_weights = self.topk_gating(x_global, expert_outputs)
         inputs_embeds = fused_embeds  # [B, T, H]
-    
+
 
         prefix_token = self.mt5_tokenizer(
                                 [f"Translate sign language video to {self.lang}: "] * len(tgt_input["gt_sentence"]),
