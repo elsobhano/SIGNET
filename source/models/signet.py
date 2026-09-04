@@ -181,7 +181,7 @@ class SignetModel(nn.Module):
         inputs_embeds = self.pose_proj(inputs_embeds)
 
         prefix_token = self.mt5_tokenizer(
-                                [f"Translate sign language video to {self.lang}: "] * len(tgt_input["gt_sentence"]),
+                                [f"Translate this video into {self.lang}:"] * len(tgt_input["gt_sentence"]),
                                 padding="longest",
                                 truncation=True,
                                 return_tensors="pt",
@@ -790,7 +790,7 @@ class SignetGate(nn.Module):
 
 
         prefix_token = self.mt5_tokenizer(
-                                [f"Translate sign language video to {self.lang}: "] * len(tgt_input["gt_sentence"]),
+                                [f"Translate this video into {self.lang}:"] * len(tgt_input["gt_sentence"]),
                                 padding="longest",
                                 truncation=True,
                                 return_tensors="pt",
@@ -860,7 +860,7 @@ class SignetGate(nn.Module):
     
 
         prefix_token = self.mt5_tokenizer(
-                                [f"Translate sign language video to {self.lang}: "] * len(tgt_input["gt_sentence"]),
+                                [f"Translate this video into {self.lang}:"] * len(tgt_input["gt_sentence"]),
                                 padding="longest",
                                 truncation=True,
                                 return_tensors="pt",
