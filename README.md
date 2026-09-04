@@ -77,4 +77,5 @@ figs/                    # README figures
 ```
 
 ## 👍 Acknowledgement
-The sign encoders are inspired by [Geo-Sign](https://github.com/ed-fish/geo-sign).
+The code structure and training scripts follow [Uni-Sign](https://github.com/ZechengLi19/Uni-Sign),
+and the sign encoders are inspired by [Geo-Sign](https://github.com/ed-fish/geo-sign).
